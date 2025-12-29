@@ -1,8 +1,8 @@
 import Image from "next/image";
-import showBanner from "./components/banner";
-import showRecentPosts from "./components/posts";
-import showRecentWorks from "./components/works";
-import showFooter from "./components/footer";
+import ShowBanner from "./components/banner";
+import ShowRecentPosts from "./components/posts";
+import ShowRecentWorks from "./components/works";
+import ShowFooter from "./components/footer";
 
 
 
@@ -10,20 +10,18 @@ export default function Home() {
   return (
     <div className="flex flex-col h-screen">
       <div className="flex flex-row gap-4 text-black font-semibold justify-end px-10 mt-5">
-        <h4>Posts</h4>
-        <h4>Works</h4>
-        <h4>Contact</h4>
+        <h4 className="cursor-pointer">Posts</h4>
+        <h4 className="cursor-pointer">Works</h4>
+        <h4 className="cursor-pointer">Contact</h4>
       </div>
 
-      <div> {showBanner() }</div>
+      <ShowBanner />
          
-      <div>{ showRecentPosts()}</div>
+      <ShowRecentPosts />
       
-      <div>{ showRecentWorks() }</div>
+      <ShowRecentWorks />
 
-      <div>{ showFooter() }</div>
-
-      
+      <ShowFooter />
     </div>
   );
 }

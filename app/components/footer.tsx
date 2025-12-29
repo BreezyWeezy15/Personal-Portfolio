@@ -1,24 +1,52 @@
-
-const mediaImage = [
-  "./facebook.png",
-  "./instagram.png",
-  "./linkedin.png",
-  "./twitter.png"
+"use client";
+const mediaInfo = [
+  {
+    id: 1,
+    image: "./facebook.png",
+    link: "https://www.facebook.com/"
+  },
+  {
+    id: 2,
+    image: "./instagram.png",
+    link: "https://www.instagram.com/"
+  },
+  {
+    id: 3,
+    image: "./linkedin.png",
+    link: "https://www.linkedin.com/feed/"
+  },
+  {
+    id: 4,
+    image: "./twitter.png",
+    link: "https://x.com/"
+  },
 ];
 
-export default function showFooter() {
+export default function ShowFooter() {
   return (
     <footer className="px-30 py-10">
       <div className="flex flex-col justify-center items-center gap-5">
         <div className="flex flex-row gap-5 justify-center items-center">
-          {mediaImage.map((image) => (
-            <img src={image} width={25} height={25} />
+          {mediaInfo.map((info) => (
+            <a
+              key={info.id}
+              href={info.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={info.image}
+                width={25}
+                height={25}
+                className="cursor-pointer"
+                alt={`Link to ${info.link}`}
+              />
+            </a>
           ))}
         </div>
 
         <h4 className="text-gray-700 font-medium text-sm">
-          {" "}
-          Copyright ©2020 All rights reserved{" "}
+          Copyright ©2020 All rights reserved
         </h4>
       </div>
     </footer>

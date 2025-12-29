@@ -1,7 +1,7 @@
 
 
 
-export default function showBanner(){
+export default function ShowBanner(){
     return (
         <div className="flex flex-row justify-between px-30 mt-15 items-center">
         <div className="flex flex-col gap-7">

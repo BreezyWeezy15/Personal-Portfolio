@@ -17,7 +17,7 @@ const posts = [
   },
 ];
 
-export default function showRecentPosts() {
+export default function ShowRecentPosts() {
   return (
     <div className="flex flex-col justify-between px-30 py-20 mt-15 bg-blue-100">
       <div className="flex flex-row justify-between items-center mt-10">

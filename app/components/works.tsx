@@ -28,7 +28,7 @@ const works = [
   },
 ];
 
-export default function showRecentWorks() {
+export default function ShowRecentWorks() {
   return (
     <div className="flex flex-col px-30 mt-30 ">
       <h4 className="text-black text-2xl font-semibold mb-6">Featured Works</h4>
