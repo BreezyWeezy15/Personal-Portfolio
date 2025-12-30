@@ -1,5 +1,3 @@
-
-
 const posts = [
   {
     id: 1,
@@ -19,27 +17,29 @@ const posts = [
 
 export default function ShowRecentPosts() {
   return (
-    <div className="flex flex-col justify-between px-30 py-20 mt-15 bg-blue-100">
-      <div className="flex flex-row justify-between items-center mt-10">
-        <h4 className="text-black font-bold">Recent posts</h4>
-        <h4 className="text-blue-600 font-semibold text-sm">View All</h4>
-      </div>
+    <section id="posts">
+      <div className="flex flex-col justify-between px-30 py-20 mt-15 bg-blue-100">
+        <div className="flex flex-row justify-between items-center mt-10">
+          <h4 className="text-black font-bold">Recent posts</h4>
+          <h4 className="text-blue-600 font-semibold text-sm">View All</h4>
+        </div>
 
-      <div className="flex flex-row  mt-5 gap-10">
-        {posts.map((e) => (
-          <div key={e.id}>
-            <div className="flex flex-col bg-white shadow-md p-10 gap-5">
-              <h4 className="text-black font-bold text-2xl">{e.title}</h4>
-              <div className="flex flex-row gap-10">
-                <h4 className="text-black font-semibold">{e.date}</h4>
-                <h4 className="text-black font-semibold">{e.category}</h4>
+        <div className="flex flex-row  mt-5 gap-10">
+          {posts.map((e) => (
+            <div key={e.id}>
+              <div className="flex flex-col bg-white shadow-md p-10 gap-5">
+                <h4 className="text-black font-bold text-2xl">{e.title}</h4>
+                <div className="flex flex-row gap-10">
+                  <h4 className="text-black font-semibold">{e.date}</h4>
+                  <h4 className="text-black font-semibold">{e.category}</h4>
+                </div>
+
+                <h4 className="text-gray-600 font-medium">{e.text}</h4>
               </div>
-
-              <h4 className="text-gray-600 font-medium">{e.text}</h4>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -3,7 +3,9 @@
 
 export default function ShowBanner(){
     return (
-        <div className="flex flex-row justify-between px-30 mt-15 items-center">
+      <section id="banner">
+
+         <div className="flex flex-row justify-between px-30 mt-15 items-center">
         <div className="flex flex-col gap-7">
           <h4 className="text-black font-bold text-4xl">
             Hi, I am John, <br /> Creative Technologist
@@ -25,5 +27,7 @@ export default function ShowBanner(){
           className="object-cover"
         />
       </div>
+
+      </section>
     );
 }

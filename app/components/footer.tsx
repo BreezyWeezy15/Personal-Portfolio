@@ -24,7 +24,7 @@ const mediaInfo = [
 
 export default function ShowFooter() {
   return (
-    <footer className="px-30 py-10">
+    <footer id="contact" className="px-30 py-10">
       <div className="flex flex-col justify-center items-center gap-5">
         <div className="flex flex-row gap-5 justify-center items-center">
           {mediaInfo.map((info) => (
