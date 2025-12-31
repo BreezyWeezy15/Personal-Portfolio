@@ -4,7 +4,7 @@ type ShowBannersProps = {
   isDark : boolean;
 };
 
-export default function ShowBanner( { isDark} : ShowBannersProps){
+export default function ShowBanner( { isDark} : ShowBannersProps ){
     return (
       <section id="banner">
 
@@ -18,7 +18,7 @@ export default function ShowBanner( { isDark} : ShowBannersProps){
             <br /> sint. Velit officia consequat duis enim velit mollit.
             Exercitation veniam <br /> consequat sunt nostrud amet.
           </h4>
-          <button className="bg-orange-500 w-fit p-2 rounded-lg">
+          <button className={` ${ isDark ? "bg-blue-900" : "bg-orange-500" } w-fit p-2 rounded-lg text-sm`}>
             Download Resume
           </button>
         </div>
