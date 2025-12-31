@@ -1,16 +1,19 @@
 
 
+type ShowBannersProps = {
+  isDark : boolean;
+};
 
-export default function ShowBanner(){
+export default function ShowBanner( { isDark} : ShowBannersProps){
     return (
       <section id="banner">
 
          <div className="flex flex-row justify-between px-30 mt-15 items-center">
         <div className="flex flex-col gap-7">
-          <h4 className="text-black font-bold text-4xl">
+          <h4 className={`${ isDark ? "text-white" : "text-black " } font-bold text-4xl`}>
             Hi, I am John, <br /> Creative Technologist
           </h4>
-          <h4 className="text-gray-800 font-medium text-sm">
+          <h4 className={`${ isDark ? "text-gray-400" : "text-black"} font-medium text-sm"`}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet{" "}
             <br /> sint. Velit officia consequat duis enim velit mollit.
             Exercitation veniam <br /> consequat sunt nostrud amet.

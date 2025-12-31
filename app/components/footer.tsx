@@ -22,7 +22,12 @@ const mediaInfo = [
   },
 ];
 
-export default function ShowFooter() {
+
+type ShowFootersProps = {
+   isDark: boolean;
+};
+
+export default function ShowFooter( { isDark } : ShowFootersProps ) {
   return (
     <footer id="contact" className="px-30 py-10">
       <div className="flex flex-col justify-center items-center gap-5">
@@ -45,7 +50,7 @@ export default function ShowFooter() {
           ))}
         </div>
 
-        <h4 className="text-gray-700 font-medium text-sm">
+        <h4 className={`${ isDark ? "text-white" : "text-gray-800"} font-medium text-sm" `}>
           Copyright ©2020 All rights reserved
         </h4>
       </div>

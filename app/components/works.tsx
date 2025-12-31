@@ -28,11 +28,16 @@ const works = [
   },
 ];
 
-export default function ShowRecentWorks() {
+
+type ShowWorksProps = {
+  isDark : boolean;
+};
+
+export default function ShowRecentWorks( { isDark } : ShowWorksProps ) {
   return (
     <section id="works">
       <div className="flex flex-col px-30 mt-30 ">
-        <h4 className="text-black text-2xl font-semibold mb-6">
+        <h4 className={`${ isDark ? "text-white" : "text-black"} text-2xl font-semibold mb-6"`}>
           Featured Works
         </h4>
 
@@ -50,7 +55,7 @@ export default function ShowRecentWorks() {
                 />
 
                 <div className="flex flex-col gap-5 p-5">
-                  <h4 className="text-black font-semibold text-3xl">
+                  <h4 className={`${ isDark ? "text-white" : "text-black"} font-semibold text-3xl"`}>
                     {e.title}
                   </h4>
 
